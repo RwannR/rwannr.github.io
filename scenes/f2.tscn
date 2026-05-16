@@ -1,0 +1,141 @@
+[gd_scene format=3 uid="uid://6ecteqaql4le"]
+
+[ext_resource type="Texture2D" uid="uid://clx5phiqdyaba" path="res://assets/tiles/wall_wood.png" id="1_lc7jt"]
+[ext_resource type="PackedScene" uid="uid://bmgpj163q6tgg" path="res://scenes/player.tscn" id="2_2lla8"]
+[ext_resource type="PackedScene" uid="uid://c6qfqs54u4vm6" path="res://scenes/popup_tip.tscn" id="3_i4tsk"]
+[ext_resource type="PackedScene" uid="uid://c0u08why6cvka" path="res://scenes/mascot.tscn" id="4_mlix7"]
+[ext_resource type="PackedScene" uid="uid://cl4etise2t5hd" path="res://scenes/floor_label.tscn" id="5_2lla8"]
+[ext_resource type="PackedScene" uid="uid://de33eukmy65xf" path="res://scenes/loading_zone.tscn" id="5_4btr7"]
+[ext_resource type="PackedScene" uid="uid://0ma8h40utt62" path="res://scenes/quest_panel.tscn" id="6_i4tsk"]
+[ext_resource type="PackedScene" uid="uid://c3h1whqlgagbd" path="res://scenes/choice_dialog.tscn" id="7_7cp3m"]
+[ext_resource type="PackedScene" uid="uid://cmwwsggvekmr7" path="res://scenes/inventory_panel.tscn" id="7_lc7jt"]
+[ext_resource type="PackedScene" uid="uid://b2etn4u4c7dm1" path="res://scenes/vigilance_gauge.tscn" id="8_f31t8"]
+[ext_resource type="PackedScene" uid="uid://7weutgxyii2s" path="res://scenes/menu_button.tscn" id="9_8mcag"]
+[ext_resource type="PackedScene" uid="uid://ctdubhvq3wamq" path="res://scenes/interactable.tscn" id="10_7d433"]
+[ext_resource type="PackedScene" uid="uid://mskrrm0xb5a6" path="res://scenes/password_window.tscn" id="10_f31t8"]
+[ext_resource type="Texture2D" uid="uid://ceo4h7qg20dwq" path="res://assets/sprites/reception_desk.png" id="13_f31t8"]
+[ext_resource type="Script" uid="uid://dolelm5uyaimw" path="res://scripts/quest_dependent.gd" id="14_8mcag"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_crjoi"]
+size = Vector2(1280, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pdp7v"]
+size = Vector2(16, 720)
+
+[node name="F2" type="Node2D" unique_id=957029798]
+
+[node name="Background" type="Sprite2D" parent="." unique_id=758697463]
+position = Vector2(-1.0000038, 0)
+scale = Vector2(3.4621623, 3.7333333)
+texture = ExtResource("1_lc7jt")
+centered = false
+
+[node name="Floor" type="StaticBody2D" parent="." unique_id=397143965]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor" unique_id=1124182968]
+position = Vector2(640, 568)
+shape = SubResource("RectangleShape2D_crjoi")
+
+[node name="ColorRect" type="ColorRect" parent="Floor" unique_id=1363563178]
+offset_top = 560.0
+offset_right = 1280.0
+offset_bottom = 576.0
+color = Color(0, 0, 0, 1)
+
+[node name="WallLeft" type="StaticBody2D" parent="." unique_id=2063154964]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WallLeft" unique_id=420867175]
+position = Vector2(7, 360)
+shape = SubResource("RectangleShape2D_pdp7v")
+
+[node name="ColorRect" type="ColorRect" parent="WallLeft" unique_id=1224588464]
+offset_left = -1.0
+offset_right = 15.0
+offset_bottom = 720.0
+color = Color(0, 0, 0, 1)
+
+[node name="WallRight" type="StaticBody2D" parent="." unique_id=2033027309]
+position = Vector2(1280, -1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WallRight" unique_id=199677220]
+position = Vector2(7, 360)
+shape = SubResource("RectangleShape2D_pdp7v")
+
+[node name="ColorRect" type="ColorRect" parent="WallRight" unique_id=2056642719]
+offset_left = -1.0
+offset_right = 15.0
+offset_bottom = 720.0
+color = Color(0, 0, 0, 1)
+
+[node name="UILayer" type="CanvasLayer" parent="." unique_id=499895639]
+
+[node name="PopupTip" parent="UILayer" unique_id=1157203150 instance=ExtResource("3_i4tsk")]
+
+[node name="Mascot" parent="UILayer" unique_id=1576837599 instance=ExtResource("4_mlix7")]
+offset_left = 1255.0
+offset_top = 694.0
+offset_right = 1295.0
+offset_bottom = 734.0
+scale = Vector2(2, 2)
+
+[node name="QuestPanel" parent="UILayer" unique_id=90127479 instance=ExtResource("6_i4tsk")]
+
+[node name="ChoiceDialog" parent="UILayer" unique_id=885838476 instance=ExtResource("7_7cp3m")]
+
+[node name="InventoryPanel" parent="UILayer" unique_id=161723743 instance=ExtResource("7_lc7jt")]
+
+[node name="FloorLabel" parent="UILayer" unique_id=1509008192 instance=ExtResource("5_2lla8")]
+offset_left = 0.0
+offset_top = 581.0
+offset_right = 200.0
+offset_bottom = 609.0
+
+[node name="VigilanceGauge" parent="UILayer" unique_id=1717382241 instance=ExtResource("8_f31t8")]
+
+[node name="MenuButton" parent="UILayer" unique_id=247907097 instance=ExtResource("9_8mcag")]
+
+[node name="BrowserLayer" type="CanvasLayer" parent="." unique_id=1277525661]
+layer = 20
+
+[node name="PasswordWindow" parent="BrowserLayer" unique_id=787210544 instance=ExtResource("10_f31t8")]
+
+[node name="StairsUp" parent="." unique_id=1180072042 instance=ExtResource("5_4btr7")]
+position = Vector2(1247, 510)
+target_floor = "roof"
+
+[node name="StairsDown" parent="." unique_id=1373237060 instance=ExtResource("5_4btr7")]
+position = Vector2(47, 511)
+target_floor = "f1"
+spawn_x = 1050.0
+goes_up = false
+
+[node name="Computer_Password" parent="." unique_id=638625719 instance=ExtResource("10_7d433")]
+position = Vector2(800, 536)
+opens_browser = true
+browser_group = "password_window"
+
+[node name="Sprite2D" parent="Computer_Password" index="0" unique_id=622391368]
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("13_f31t8")
+
+[node name="QuestDependent" type="Node" parent="Computer_Password" unique_id=16578329]
+script = ExtResource("14_8mcag")
+required_quest = "q_password"
+
+[node name="Unlocked_PC" parent="." unique_id=1717220997 instance=ExtResource("10_7d433")]
+position = Vector2(402, 536)
+event_id = "unlocked_pc"
+
+[node name="Sprite2D" parent="Unlocked_PC" index="0" unique_id=622391368]
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("13_f31t8")
+
+[node name="QuestDependent" type="Node" parent="Unlocked_PC" unique_id=1165795122]
+script = ExtResource("14_8mcag")
+required_quest = "q_unlocked_pc"
+
+[node name="Player" parent="." unique_id=1236099490 instance=ExtResource("2_2lla8")]
+position = Vector2(201, 525)
+
+[editable path="Computer_Password"]
+[editable path="Unlocked_PC"]

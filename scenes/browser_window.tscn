@@ -1,0 +1,109 @@
+[gd_scene format=3 uid="uid://bexjl7fyt6acm"]
+
+[ext_resource type="Script" uid="uid://ddvbq3afymyqx" path="res://scripts/browser_window.gd" id="1_q0lni"]
+[ext_resource type="Script" uid="uid://dowl2klcbku1c" path="res://scripts/phishing_game.gd" id="2_gwaru"]
+[ext_resource type="PackedScene" uid="uid://d1mixursh2ocl" path="res://scenes/video_panel.tscn" id="3_d46fq"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gwaru"]
+bg_color = Color(0.16470589, 0.16470589, 0.19607843, 1)
+
+[node name="BrowserWindow" type="Control" unique_id=787210544 groups=["browser_window"]]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_q0lni")
+
+[node name="Overlay" type="ColorRect" parent="." unique_id=1804080456]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.68235296)
+
+[node name="WindowPanel" type="PanelContainer" parent="." unique_id=1781862681]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -450.0
+offset_top = -275.0
+offset_right = 450.0
+offset_bottom = 275.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_gwaru")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="WindowPanel" unique_id=2090382452]
+layout_mode = 2
+
+[node name="TitleBar" type="PanelContainer" parent="WindowPanel/VBoxContainer" unique_id=98385292]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="WindowPanel/VBoxContainer/TitleBar" unique_id=1105454047]
+layout_mode = 2
+
+[node name="TabTitle" type="Label" parent="WindowPanel/VBoxContainer/TitleBar/HBoxContainer" unique_id=177954724]
+layout_mode = 2
+text = "CyberMail"
+
+[node name="Spacer" type="Control" parent="WindowPanel/VBoxContainer/TitleBar/HBoxContainer" unique_id=714635540]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ReloadBtn" type="Button" parent="WindowPanel/VBoxContainer/TitleBar/HBoxContainer" unique_id=974729176]
+layout_mode = 2
+text = "🗘"
+
+[node name="CloseBtn" type="Button" parent="WindowPanel/VBoxContainer/TitleBar/HBoxContainer" unique_id=1646556858]
+layout_mode = 2
+text = "X"
+
+[node name="UrlBar" type="PanelContainer" parent="WindowPanel/VBoxContainer" unique_id=1485910743]
+layout_mode = 2
+
+[node name="UrlLabel" type="Label" parent="WindowPanel/VBoxContainer/UrlBar" unique_id=2017628211]
+layout_mode = 2
+text = "https://mail.cyberoffice.com/inbox"
+
+[node name="ContentArea" type="MarginContainer" parent="WindowPanel/VBoxContainer" unique_id=48877235]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="PhishingGame" type="VBoxContainer" parent="WindowPanel/VBoxContainer/ContentArea" unique_id=1442814793]
+layout_mode = 2
+script = ExtResource("2_gwaru")
+
+[node name="Instructions" type="Label" parent="WindowPanel/VBoxContainer/ContentArea/PhishingGame" unique_id=1712393852]
+layout_mode = 2
+text = "Marquez chaque mail comme légitime ou phishing."
+
+[node name="MailScroll" type="ScrollContainer" parent="WindowPanel/VBoxContainer/ContentArea/PhishingGame" unique_id=11404126]
+custom_minimum_size = Vector2(0, 350)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="MailList" type="VBoxContainer" parent="WindowPanel/VBoxContainer/ContentArea/PhishingGame/MailScroll" unique_id=717339063]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ValidateBtn" type="Button" parent="WindowPanel/VBoxContainer/ContentArea/PhishingGame" unique_id=1142900774]
+layout_mode = 2
+text = "Valider mes réponses"
+
+[node name="Result" type="Label" parent="WindowPanel/VBoxContainer/ContentArea/PhishingGame" unique_id=471087181]
+layout_mode = 2
+autowrap_mode = 3
+
+[node name="VideoPanel" parent="WindowPanel/VBoxContainer/ContentArea" unique_id=1638261194 instance=ExtResource("3_d46fq")]
+layout_mode = 2

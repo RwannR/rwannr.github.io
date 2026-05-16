@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://ctigurwfl4rrw"]
+
+[ext_resource type="Script" uid="uid://b3tclkggb4av1" path="res://scripts/mascot_trigger.gd" id="1_bpcdt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uf7cf"]
+size = Vector2(61.5, 132)
+
+[node name="MascotTrigger" type="Area2D" unique_id=1149750023]
+collision_layer = 0
+script = ExtResource("1_bpcdt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2114661432]
+shape = SubResource("RectangleShape2D_uf7cf")

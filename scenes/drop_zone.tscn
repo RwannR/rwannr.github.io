@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://dmm83ijy6jyah"]
+
+[ext_resource type="Script" uid="uid://qdsmc1ys2c3l" path="res://scripts/drop_zone.gd" id="1_5owwn"]
+[ext_resource type="Texture2D" uid="uid://ceo4h7qg20dwq" path="res://assets/sprites/reception_desk.png" id="1_dlln2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5owwn"]
+size = Vector2(172, 111)
+
+[node name="DropZone" type="Area2D" unique_id=2022911892 groups=["interactable"]]
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("1_5owwn")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1103225261]
+texture = ExtResource("1_dlln2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1474434766]
+position = Vector2(1, 0.5)
+shape = SubResource("RectangleShape2D_5owwn")

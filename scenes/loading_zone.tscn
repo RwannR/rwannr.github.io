@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://de33eukmy65xf"]
+
+[ext_resource type="Script" uid="uid://dhk4gs1qt3hjd" path="res://scripts/loading_zone.gd" id="1_uhhlp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hcdg7"]
+size = Vector2(64, 100)
+
+[node name="LoadingZone" type="Area2D" unique_id=1180072042]
+collision_layer = 0
+script = ExtResource("1_uhhlp")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1876561427]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1023748960]
+shape = SubResource("RectangleShape2D_hcdg7")

@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://cmwwsggvekmr7"]
+
+[ext_resource type="Script" uid="uid://duvybixkyqscl" path="res://scripts/inventory_panel.gd" id="1_v4pxl"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2myvp"]
+bg_color = Color(0.16470589, 0.16470589, 0.19607843, 1)
+
+[node name="InventoryPanel" type="PanelContainer" unique_id=161723743 groups=["inventory_panel"]]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -50.0
+offset_right = 400.0
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_2myvp")
+script = ExtResource("1_v4pxl")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1079527514]
+layout_mode = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="ItemRow" type="HBoxContainer" parent="MarginContainer" unique_id=893145985]
+layout_mode = 2

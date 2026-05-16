@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://d1mixursh2ocl"]
+
+[ext_resource type="Script" uid="uid://cdvdnakiteueo" path="res://scripts/video_panel.gd" id="1_nwt45"]
+
+[node name="VideoPanel" type="VBoxContainer" unique_id=1638261194]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_nwt45")
+
+[node name="VideoTitle" type="Label" parent="." unique_id=1234023372]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Formation"
+
+[node name="HSeparator" type="HSeparator" parent="." unique_id=1776617046]
+layout_mode = 2
+
+[node name="VideoPlayer" type="VideoStreamPlayer" parent="." unique_id=1809287403]
+custom_minimum_size = Vector2(0, 300)
+layout_mode = 2
+expand = true
+
+[node name="Placeholder" type="Label" parent="." unique_id=858006844]
+custom_minimum_size = Vector2(0, 300)
+layout_mode = 2
+text = "[ Vidéo de formation ]"
+horizontal_alignment = 1
+
+[node name="VideoDescription" type="Label" parent="." unique_id=713281209]
+layout_mode = 2
+autowrap_mode = 3
+
+[node name="ContinueBtn" type="Button" parent="." unique_id=1260181475]
+layout_mode = 2
+text = "Continuer"

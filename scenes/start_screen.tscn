@@ -1,0 +1,88 @@
+[gd_scene format=3 uid="uid://c367trrpifvf4"]
+
+[ext_resource type="Script" uid="uid://dkgbqylm2vrdk" path="res://scripts/start_screen.gd" id="1_tx5wa"]
+
+[node name="StartScreen" type="Control" unique_id=1613888809]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_tx5wa")
+
+[node name="Background" type="ColorRect" parent="." unique_id=1198661044]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.101960786, 0.101960786, 0.18039216, 1)
+
+[node name="Content" type="VBoxContainer" parent="." unique_id=1637158720]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -250.0
+offset_top = -225.0
+offset_right = 250.0
+offset_bottom = 225.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Title" type="Label" parent="Content" unique_id=503365885]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "CyberOffice"
+horizontal_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="Content" unique_id=156209326]
+layout_mode = 2
+
+[node name="NameLabel" type="Label" parent="Content" unique_id=1981465105]
+layout_mode = 2
+text = "Votre nom : "
+horizontal_alignment = 1
+
+[node name="NameInput" type="LineEdit" parent="Content" unique_id=1039642049]
+layout_mode = 2
+placeholder_text = "Entrez votre nom..."
+alignment = 1
+
+[node name="HSeparator2" type="HSeparator" parent="Content" unique_id=1634592017]
+layout_mode = 2
+
+[node name="SkinLabel" type="Label" parent="Content" unique_id=1718361928]
+layout_mode = 2
+text = "Choisissez votre personnage : "
+horizontal_alignment = 1
+
+[node name="SkinChoice" type="HBoxContainer" parent="Content" unique_id=2112790851]
+layout_mode = 2
+alignment = 1
+
+[node name="BtnMale" type="Button" parent="Content/SkinChoice" unique_id=1708591683]
+layout_mode = 2
+text = "Homme"
+
+[node name="BtnFemale" type="Button" parent="Content/SkinChoice" unique_id=1683980509]
+layout_mode = 2
+text = "Femme"
+
+[node name="HSeparator3" type="HSeparator" parent="Content" unique_id=1620330565]
+layout_mode = 2
+
+[node name="BtnTraining" type="Button" parent="Content" unique_id=1496614467]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+text = "Jouer en mode Training"
+
+[node name="BtnGame" type="Button" parent="Content" unique_id=260185038]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+text = "Jouer en mode Jeu"

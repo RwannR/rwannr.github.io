@@ -1,0 +1,75 @@
+[gd_scene format=3 uid="uid://7weutgxyii2s"]
+
+[ext_resource type="Script" uid="uid://pda68x17plt" path="res://scripts/menu_button.gd" id="1_xsssc"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n3wyl"]
+bg_color = Color(0.16470589, 0.16470589, 0.19607843, 1)
+
+[node name="MenuButton" type="Control" unique_id=247907097]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_xsssc")
+
+[node name="Btn" type="Button" parent="." unique_id=1758757890]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -79.0
+offset_top = 58.0
+offset_right = -9.0
+offset_bottom = 89.0
+grow_horizontal = 0
+text = "Menu"
+
+[node name="ConfirmDialog" type="PanelContainer" parent="." unique_id=1557897531]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -90.0
+offset_right = 200.0
+offset_bottom = 90.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_n3wyl")
+
+[node name="MarginContainer" type="MarginContainer" parent="ConfirmDialog" unique_id=1204353652]
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ConfirmDialog/MarginContainer" unique_id=931622591]
+layout_mode = 2
+
+[node name="Message" type="Label" parent="ConfirmDialog/MarginContainer/VBoxContainer" unique_id=999308732]
+layout_mode = 2
+text = "Voulez-vous revenir au menu principal ? Votre progression ne sera pas sauvegardée."
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="HSeparator" type="HSeparator" parent="ConfirmDialog/MarginContainer/VBoxContainer" unique_id=1792357283]
+layout_mode = 2
+
+[node name="Buttons" type="HBoxContainer" parent="ConfirmDialog/MarginContainer/VBoxContainer" unique_id=2082733789]
+layout_mode = 2
+alignment = 1
+
+[node name="BtnYes" type="Button" parent="ConfirmDialog/MarginContainer/VBoxContainer/Buttons" unique_id=964671320]
+layout_mode = 2
+text = "Oui, quitter"
+
+[node name="BtnNo" type="Button" parent="ConfirmDialog/MarginContainer/VBoxContainer/Buttons" unique_id=998175582]
+layout_mode = 2
+text = "Non, continuer"

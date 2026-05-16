@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://b2etn4u4c7dm1"]
+
+[ext_resource type="Script" uid="uid://bu5yxdv4xvt5v" path="res://scripts/vigilance_gauge.gd" id="1_mqj3q"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ytc0c"]
+bg_color = Color(0.16470589, 0.16470589, 0.19607843, 1)
+
+[node name="VigilanceGauge" type="PanelContainer" unique_id=1717382241]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -220.0
+offset_bottom = 43.0
+grow_horizontal = 0
+pivot_offset = Vector2(-1142, 462)
+theme_override_styles/panel = SubResource("StyleBoxFlat_ytc0c")
+script = ExtResource("1_mqj3q")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1620682076]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer" unique_id=881457906]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="MarginContainer/HBoxContainer" unique_id=344219357]
+layout_mode = 2
+text = "Vigilance :"
+
+[node name="Bar" type="ProgressBar" parent="MarginContainer/HBoxContainer" unique_id=951814247]
+custom_minimum_size = Vector2(120, 20)
+layout_mode = 2

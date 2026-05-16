@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://cq7uaur630ngj"]
+
+[ext_resource type="Script" uid="uid://7hcx2x180hen" path="res://scripts/door_event.gd" id="1_6pqat"]
+[ext_resource type="Texture2D" uid="uid://d2c156jvkjdny" path="res://assets/sprites/door.png" id="2_tkhsg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lo8ea"]
+size = Vector2(32, 64)
+
+[node name="DoorEvent" type="Area2D" unique_id=1587403573 groups=["interactable"]]
+position = Vector2(16, 688)
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("1_6pqat")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1100689701]
+texture = ExtResource("2_tkhsg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=460136765]
+shape = SubResource("RectangleShape2D_lo8ea")
+
+[node name="AlertTimer" type="Timer" parent="." unique_id=615812072]
+one_shot = true
+
+[node name="TimerLabel" type="Label" parent="." unique_id=1076478543]
+offset_left = -16.0
+offset_top = -50.0
+offset_right = 24.0
+offset_bottom = -27.0
