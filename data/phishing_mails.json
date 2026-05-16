@@ -1,0 +1,81 @@
+{
+    "config": {
+        "mails_per_round": 5,
+        "min_phishing": 2,
+        "max_phishing": 3
+    },
+    "mails": [
+        {
+            "from": "support@m1crosoft.com",
+            "subject": "Votre compte a été compromis",
+            "body": "Cliquez immédiatement sur le lien ci-dessous pour sécuriser votre compte. Vous avez 24h avant suppression.",
+            "is_legit": false
+        },
+        {
+            "from": "rh@blueveil.fr",
+            "subject": "Planning congés 2025",
+            "body": "Bonjour, merci de remplir vos souhaits de congés pour le second semestre avant le 15 juin. Cordialement.",
+            "is_legit": true
+        },
+        {
+            "from": "service-client@amaz0n.fr",
+            "subject": "Confirmation de commande #38291",
+            "body": "Votre commande est en attente. Veuillez confirmer vos informations bancaires pour finaliser le paiement.",
+            "is_legit": false
+        },
+        {
+            "from": "noreply@banque-securite.com",
+            "subject": "Activité suspecte détectée",
+            "body": "Nous avons détecté une connexion inhabituelle. Connectez-vous via le lien sécurisé ci-joint pour vérifier.",
+            "is_legit": false
+        },
+        {
+            "from": "direction@blueveil.fr",
+            "subject": "Réunion équipe lundi 9h",
+            "body": "Bonjour à tous, rappel pour la réunion de lancement de sprint lundi à 9h en salle B. Ordre du jour en PJ.",
+            "is_legit": true
+        },
+        {
+            "from": "it-support@blueveil.fr",
+            "subject": "Mise à jour VPN obligatoire",
+            "body": "Bonjour, la mise à jour du client VPN est disponible sur le portail interne. Merci de l'installer avant vendredi.",
+            "is_legit": true
+        },
+        {
+            "from": "admin@g00gle-security.com",
+            "subject": "Alerte sécurité Google",
+            "body": "Quelqu'un a tenté de se connecter à votre compte. Cliquez ici pour changer votre mot de passe immédiatement.",
+            "is_legit": false
+        },
+        {
+            "from": "compta@blueveil.fr",
+            "subject": "Note de frais validée",
+            "body": "Votre note de frais du mois de mai a été validée. Le remboursement sera effectué sur la paie de juin.",
+            "is_legit": true
+        },
+        {
+            "from": "prince.nigeria@outlook.com",
+            "subject": "Opportunité exceptionnelle",
+            "body": "Je suis le Prince du Nigeria et j'ai besoin de votre aide pour transférer 15 millions d'euros. Vous recevrez 30%.",
+            "is_legit": false
+        },
+        {
+            "from": "postmaster@lp-oste.fr",
+            "subject": "Colis en attente de livraison",
+            "body": "Votre colis est bloqué en douane. Payez 2,99€ de frais pour débloquer la livraison sous 48h.",
+            "is_legit": false
+        },
+        {
+            "from": "formation@blueveil.fr",
+            "subject": "Inscription formation cybersécurité",
+            "body": "Votre inscription à la formation Sensibilisation Cyber du 20 juin est confirmée. Salle A, 14h-17h.",
+            "is_legit": true
+        },
+        {
+            "from": "security@paypa1.com",
+            "subject": "Votre compte PayPal est limité",
+            "body": "Nous avons restreint votre compte. Connectez-vous et vérifiez vos informations pour rétablir l'accès complet.",
+            "is_legit": false
+        }
+    ]
+}

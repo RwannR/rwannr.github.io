@@ -1,0 +1,130 @@
+{
+    "usb_key": {
+        "description": "Vous trouvez une clé USB par terre dans le couloir. Que faites-vous ?",
+        "quest_id": "q_usb",
+        "choices": [
+            {
+                "label": "La brancher sur mon PC pour voir à qui elle appartient",
+                "feedback": "Mauvais réflexe ! Une clé USB inconnue peut contenir un malware qui s'exécute automatiquement (BadUSB). Ne branchez jamais de périphérique USB inconnu.",
+                "correct": false,
+                "vigilance": 10
+            },
+            {
+                "label": "La déposer à l'accueil sans la brancher",
+                "feedback": "Bonne réaction ! Vous évitez le risque de malware tout en permettant de retrouver le propriétaire.",
+                "correct": true,
+                "vigilance": 10
+            },
+            {
+                "label": "L'apporter directement au service informatique",
+                "feedback": "Excellent réflexe ! Le service informatique pourra analyser la clé de manière sécurisée.",
+                "correct": true,
+                "vigilance": 15
+            },
+            {
+                "label": "La jeter à la poubelle",
+                "feedback": "Ce n'est pas idéal. La clé pourrait contenir des données importantes. Mieux vaut la remettre au service informatique.",
+                "correct": false,
+                "vigilance": 5
+            }
+        ]
+    },
+    "sensitive_document": {
+        "description": "Vous trouvez un document marqué 'CONFIDENTIEL' laissé sur un bureau vide. Que faites-vous ?",
+        "quest_id": "q_document",
+        "choices": [
+            {
+                "label": "Le lire pour voir de quoi il s'agit",
+                "feedback": "Mauvais réflexe ! Vous n'avez pas forcément l'habilitation pour lire ce document. Le consulter sans autorisation est une faute.",
+                "correct": false,
+                "vigilance": 10
+            },
+            {
+                "label": "Le ranger dans le tiroir verrouillable du bureau",
+                "feedback": "Bonne initiative ! Vous protégez le document en attendant le retour de son propriétaire.",
+                "correct": true,
+                "vigilance": 10
+            },
+            {
+                "label": "Le remettre à son propriétaire ou au responsable",
+                "feedback": "Excellent réflexe ! C'est la meilleure manière de s'assurer que le document est traité correctement.",
+                "correct": true,
+                "vigilance": 15
+            },
+            {
+                "label": "Le laisser là, ce n'est pas mon problème",
+                "feedback": "Mauvais choix. Un document confidentiel laissé à la vue de tous peut être photographié ou volé. Chacun est responsable de la sécurité.",
+                "correct": false,
+                "vigilance": 10
+            }
+        ]
+    },
+    "visitor": {
+        "description": "Un inconnu se présente à l'accueil : 'Bonjour, je viens voir M. Dupont pour une réunion.' Que faites-vous ?",
+        "quest_id": "q_visitor",
+        "choices": [
+            {
+                "label": "Le laisser entrer, il a l'air professionnel",
+                "feedback": "Mauvais réflexe ! L'apparence ne garantit pas l'identité. Un intrus peut se présenter de manière très convaincante.",
+                "correct": false,
+                "vigilance": 15
+            },
+            {
+                "label": "Lui demander son nom et son entreprise, l'inscrire au registre et lui donner un badge visiteur",
+                "feedback": "Bon réflexe ! Vous vérifiez l'identité et tracez la visite. Mais il manque une étape...",
+                "correct": false,
+                "vigilance": 5
+            },
+            {
+                "label": "Vérifier son identité, l'inscrire au registre, lui donner un badge ET appeler M. Dupont pour confirmer le rendez-vous",
+                "feedback": "Excellent ! Procédure complète : identification, traçabilité, badge visiteur et confirmation auprès de la personne visitée.",
+                "correct": true,
+                "vigilance": 15
+            },
+            {
+                "label": "Lui prêter votre badge pour qu'il monte directement",
+                "feedback": "Très mauvais réflexe ! Ne prêtez jamais votre badge. Il donne accès à vos droits et ne doit pas être partagé.",
+                "correct": false,
+                "vigilance": 15
+            }
+        ]
+    },
+    "unlocked_pc": {
+        "description": "Votre collègue vient de quitter son bureau pour une réunion. Son PC est resté déverrouillé, écran allumé avec des emails ouverts. Que faites-vous ?",
+        "quest_id": "q_unlocked_pc",
+        "croissantage_enabled": true,
+        "choices": [
+            {
+                "label": "Verrouiller son poste (Win+L)",
+                "feedback": "Excellent réflexe ! Vous protégez les données de votre collègue. Un poste déverrouillé est une porte ouverte.",
+                "correct": true,
+                "vigilance": 15
+            },
+            {
+                "label": "Ne rien faire, il revient bientôt",
+                "feedback": "Mauvais choix. Même quelques minutes suffisent pour qu'une personne malveillante accède aux données. Verrouillez toujours un poste abandonné.",
+                "correct": false,
+                "vigilance": 10
+            },
+            {
+                "label": "Jeter un œil à ses emails par curiosité",
+                "feedback": "Très mauvais réflexe ! Accéder au poste d'un collègue sans autorisation est une faute grave, même sans intention malveillante.",
+                "correct": false,
+                "vigilance": 15
+            },
+            {
+                "label": "Le prévenir par message qu'il a oublié de verrouiller",
+                "feedback": "Bonne initiative de prévenir, mais verrouillez d'abord son poste ! Le temps qu'il lise votre message, quelqu'un pourrait accéder à ses données.",
+                "correct": false,
+                "vigilance": 5
+            },
+            {
+                "label": "Croissantage ! Envoyer un mail à l'équipe depuis son PC",
+                "feedback": "Le croissantage est une tradition pour sensibiliser au verrouillage de session. Pensez tout de même à verrouiller le poste après !",
+                "correct": true,
+                "vigilance": 5,
+                "is_croissantage": true
+            }
+        ]
+    }
+}

@@ -1,0 +1,61 @@
+{
+    "company_name": "Blueveil",
+    "scenario": {
+        "service": "Portail RH",
+        "username": "j.dupont@blueveil.fr",
+        "context": "Vous vous connectez au portail RH pour consulter vos fiches de paie."
+    },
+    "methods": [
+        {
+            "id": "app_totp",
+            "label": "Application Authenticator (code TOTP)",
+            "description": "Ouvrez votre application d'authentification et entrez le code à 6 chiffres.",
+            "status": "recommended"
+        },
+        {
+            "id": "sms",
+            "label": "Code par SMS",
+            "description": "Un code de vérification sera envoyé par SMS à votre numéro.",
+            "status": "warning"
+        },
+        {
+            "id": "email",
+            "label": "Code par email",
+            "description": "Un code sera envoyé à votre adresse email de récupération.",
+            "status": "warning"
+        },
+        {
+            "id": "security_key",
+            "label": "Clé de sécurité physique (FIDO2)",
+            "description": "Branchez votre clé de sécurité USB et appuyez sur le bouton.",
+            "status": "recommended"
+        },
+        {
+            "id": "no_2fa",
+            "label": "Ignorer la vérification",
+            "description": "Se connecter sans double authentification.",
+            "status": "forbidden"
+        },
+        {
+            "id": "colleague_code",
+            "label": "Demander le code à un collègue",
+            "description": "Votre collègue a déjà un code, il peut vous le donner.",
+            "status": "forbidden"
+        },
+        {
+            "id": "biometric",
+            "label": "Empreinte digitale",
+            "description": "Utilisez le capteur biométrique de votre appareil.",
+            "status": "recommended"
+        }
+    ],
+    "feedback": {
+        "recommended": "Excellent choix ! C'est la méthode recommandée par votre entreprise.",
+        "warning": "Cette méthode est autorisée mais déconseillée. %s",
+        "forbidden": "Cette méthode est interdite par la politique de sécurité de votre entreprise."
+    },
+    "warnings": {
+        "sms": "Les SMS sont vulnérables aux attaques de type SIM swap. Préférez une application authenticator.",
+        "email": "L'email est un canal moins sécurisé. Si votre boîte mail est compromise, le code l'est aussi."
+    }
+}

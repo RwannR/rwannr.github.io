@@ -1,0 +1,17 @@
+{
+    "phishing": {
+        "title": "Sensibilisation au phishing",
+        "description": "Apprenez à identifier les tentatives de phishing en entreprise.",
+        "video_path": "res://assets/videos/phishing_training.ogv"
+    },
+    "password": {
+        "title": "Créer un mot de passe sécurisé",
+        "description": "Les bonnes pratiques pour des mots de passe robustes.",
+        "video_path": "res://assets/videos/password_training.ogv"
+    },
+    "twofa": {
+        "title": "La double authentification",
+        "description": "Pourquoi et comment activer le 2FA sur vos comptes professionnels.",
+        "video_path": "res://assets/videos/twofa_training.ogv"
+    }
+}

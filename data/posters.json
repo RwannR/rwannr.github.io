@@ -1,0 +1,16 @@
+{
+    "posters": [
+        {
+            "id": "company_logo",
+            "image_path": "res://assets/posters/company_logo.png",
+            "floor": "f0",
+            "description": "Logo de l'entreprise"
+        },
+        {
+            "id": "emergency_contacts",
+            "image_path": "res://assets/posters/emergency_contacts.png",
+            "floor": "f0",
+            "description": "Contacts d'urgence"
+        }
+    ]
+}

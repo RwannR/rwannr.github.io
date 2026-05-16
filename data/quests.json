@@ -1,0 +1,71 @@
+[
+    {
+        "id": "q1",
+        "title": "Bienvenue au bureau !",
+        "description": "Passez à l'accueil.",
+        "floor": "f0",
+        "unlocks": [
+            "q2"
+        ]
+    },
+    {
+        "id": "q2",
+        "title": "Détection de phishing",
+        "description": "Montez à l'étage 1 et identifiez les mails de phishing sur l'ordinateur.",
+        "floor": "f1",
+        "unlocks": [
+            "q_usb",
+            "q_unlocked_pc"
+        ]
+    },
+    {
+        "id": "q_usb",
+        "title": "Clé USB suspecte",
+        "description": "Une clé USB traîne par terre à l'étage 1. Que faut-il en faire ?",
+        "floor": "f1",
+        "unlocks": []
+    },
+    {
+        "id": "q_unlocked_pc",
+        "title": "PC non verrouillé",
+        "description": "Un collègue a quitté son bureau sans verrouiller son PC à l'étage 2. Que faites-vous ?",
+        "floor": "f2",
+        "unlocks": [
+            "q_password"
+        ]
+    },
+    {
+        "id": "q_password",
+        "title": "Mot de passe sécurisé",
+        "description": "Allez à l'étage 2 et créez un mot de passe sécurisé sur l'ordinateur.",
+        "floor": "f2",
+        "unlocks": [
+            "q_2fa"
+        ]
+    },
+    {
+        "id": "q_2fa",
+        "title": "Double authentification",
+        "description": "Sécurisez votre connexion au portail RH en choisissant la bonne méthode d'authentification.",
+        "floor": "f1",
+        "unlocks": [
+            "q3"
+        ]
+    },
+    {
+        "id": "q_document",
+        "title": "Document confidentiel",
+        "description": "Un document sensible a été oublié au rooftop. Faites le bon choix.",
+        "floor": "roof",
+        "unlocks": []
+    },
+    {
+        "id": "q3",
+        "title": "Accès au rooftop",
+        "description": "Quelqu'un vient d'oublier un document au rooftop, allez voir.",
+        "floor": "roof",
+        "unlocks": [
+            "q_document"
+        ]
+    }
+]
